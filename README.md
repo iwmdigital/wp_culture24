@@ -5,21 +5,28 @@
 ## Versions
 
 Plugin version 1.0.2 
+
 Culture24 API version 1.1
 
 
 ## Notes
 
 Requires Wordpress version >= 3.3
+
 Requires an API key from Culture24
+
 If you wish to try the supplied map code put [gmap3.js](https://github.com/jbdemonte/gmap3) in the culture24/theme folder.
 
 ## Installation
 
 Clone or extract the files to wp-content/plugins/culture24.
+
 Enable the plugin via the admin control panel.
+
 Enter your API key via the wp-admin/culture24/settings page.
+
 The plugin provides admin pages for testing and building queries.
+
 Sample implementation code can be found in the wp-content/plugins/culture24/theme folder.
 
 
