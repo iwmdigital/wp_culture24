@@ -1,15 +1,17 @@
 # Culture24 API Plugin for WordPress
 
-# Imperial War Museums
+## Imperial War Museums
 
-## Versions
+## New Media Department
+
+### Versions
 
 Plugin version 1.0.2 
 
 Culture24 API version 1.1
 
 
-## Notes
+### Notes
 
 Requires Wordpress version >= 3.3
 
@@ -17,7 +19,7 @@ Requires an API key from Culture24
 
 If you wish to try the supplied map code put [gmap3.js](https://github.com/jbdemonte/gmap3) in the culture24/theme folder.
 
-## Installation
+### Installation
 
 Clone or extract the files to wp-content/plugins/culture24.
 
@@ -30,7 +32,7 @@ The plugin provides admin pages for testing and building queries.
 Sample implementation code can be found in the wp-content/plugins/culture24/theme folder.
 
 
-## Links
+### Links
 
 [Demo](http://www.1914.org/)
 
@@ -39,7 +41,7 @@ Sample implementation code can be found in the wp-content/plugins/culture24/them
 [GitHub](https://github.com/iwmdigital/wp_culture24)
 
 
-## Copyright and license
+### Copyright and license
 
 The MIT License (MIT)
 
