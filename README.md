@@ -1,8 +1,6 @@
 # Culture24 API Plugin for WordPress
 
-## Imperial War Museums
-
-## New Media Department
+## Imperial War Museums => New Media Dept
 
 ### Versions
 
@@ -17,19 +15,19 @@ Requires Wordpress version >= 3.3
 
 Requires an API key from Culture24
 
-If you wish to try the supplied map code put [gmap3.js](https://github.com/jbdemonte/gmap3) in the culture24/theme folder.
+If you wish to try the supplied map code put [gmap3.js](https://github.com/jbdemonte/gmap3) in the culture24/theme folder
 
 ### Installation
 
-Clone or extract the files to wp-content/plugins/culture24.
+Clone or extract the files to wp-content/plugins/culture24
 
-Enable the plugin via the admin control panel.
+Enable the plugin via the admin control panel
 
-Enter your API key via the wp-admin/culture24/settings page.
+Enter your API key via the wp-admin/culture24/settings page
 
-The plugin provides admin pages for testing and building queries.
+The plugin provides admin pages for testing and building queries
 
-Sample implementation code can be found in the wp-content/plugins/culture24/theme folder.
+Sample implementation code can be found in the wp-content/plugins/culture24/theme folder
 
 
 ### Links
