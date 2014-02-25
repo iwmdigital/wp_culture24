@@ -2,14 +2,17 @@
 
 # Imperial War Museums
 
-# Plugin version 1.0.2 for Culture24 API version 1.1
+## Versions
+
+Plugin version 1.0.2 
+Culture24 API version 1.1
 
 
 ## Notes
 
 Requires Wordpress version >= 3.3
 Requires an API key from Culture24
-If you wish to try the supplied map code, [gmap3.js](https://github.com/jbdemonte/gmap3)
+If you wish to try the supplied map code put [gmap3.js](https://github.com/jbdemonte/gmap3) in the culture24/theme folder.
 
 ## Installation
 
