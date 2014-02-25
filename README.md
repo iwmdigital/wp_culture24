@@ -1,6 +1,6 @@
 # Culture24 API Plugin for WordPress
 
-## Imperial War Museums => New Media Dept
+## Imperial War Museums -> New Media Dept
 
 ### Versions
 
