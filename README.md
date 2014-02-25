@@ -9,7 +9,7 @@
 
 Requires Wordpress version >= 3.3
 Requires an API key from Culture24
-
+If you wish to try the supplied map code, [gmap3.js](https://github.com/jbdemonte/gmap3)
 
 ## Installation
 
