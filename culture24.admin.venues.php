@@ -21,6 +21,7 @@ if (isset($_POST['c24'])) {
       'offset' => $_POST['offset'],
       'limit' => $_POST['limit'],
       'tag' => $_POST['tag'],
+      'elements' => $_POST['elements'],
       'keywords' => $_POST['keywords'],
       'keyfield' => $_POST['keyfield'],
       'region' => $_POST['region'],
