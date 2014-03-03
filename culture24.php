@@ -281,7 +281,28 @@ function c24_is_date_single($dates) {
   return FALSE;
 }
 
-// LOOKUP DATA
+/* 
+ * LOOKUP DATA
+ * 
+ * NOTES ON FILTERS IN QUERIES
+ * 
+ * 1. At first glance it looks like the API can search on multiple filters 
+ * but it will only match on the first one, e.g. 
+ * &q.audience=Any+age&q.audience=Family+friendly matches on 'Any age' only.
+ * 
+ * 2. Region values are held in the contentTag array in an implicit hierarchy.
+ * Up to 3 values may or may not be present in any order and any positions in
+ * the array, e.g.
+ * contentTag: Array ( [0] => History and Heritage [1] => World War I [2] => England [3] => East of England [4] => Hertfordshire ) 
+ * contentTag: Array ( [0] => England [1] => History and Heritage [2] => East of England [3] => World War I [4] => Hertfordshire ) 
+ * contentTag: Array ( [0] => History and Heritage [1] => World War I [2] => England [3] => Hertfordshire ) 
+ * 
+ * The API seems to execute a free text search for each of the terms across the 
+ * contentTags which means that "East of England" also matches 
+ * "England" + "South East", in other words it appears to match each of the 
+ * terms across all of the tags e.g. 
+ * a museum tagged Kent, South East and England turns up in the results for an "East of England" query 
+ */
 
 /**
  *
@@ -289,18 +310,18 @@ function c24_is_date_single($dates) {
  */
 function c24_regions() {
   return array(
-      "East Midlands",
-      "East of England",
-      "London",
-      "North East",
-      "North West",
-      "Northern Ireland",
-      "Scotland",
-      "South East",
-      "South West",
-      "Wales",
-      "West Midlands",
-      "Yorkshire",
+      'East Midlands',
+      'East of England',
+      'London',
+      'North East',
+      'North West',
+      'Northern Ireland',
+      'Scotland',
+      'South East',
+      'South West',
+      'Wales',
+      'West Midlands',
+      'Yorkshire',
   );
 }
 
@@ -310,54 +331,53 @@ function c24_regions() {
  */
 function c24_foreignparts() {
   return array(
-      "Australia",
-      "Austria",
-      "Belgium ",
-      "Bosnia And Herzegovina",
-      "Canada",
-      "Denmark",
-      "Finland",
-      "France",
-      "Germany",
-      "Hungary",
-      "Iran",
-      "Ireland",
-      "Italy",
-      "Namibia",
-      "Netherlands",
-      "New Zealand",
-      "Poland",
-      "Portugal",
-      "Russian Federation",
-      "Serbia",
-      "Singapore",
-      "Slovakia",
-      "Slovenia",
-      "South Africa",
-      "Spain",
-      "Sweden",
-      "Switzerland",
-      "Trinidad and Tobago",
-      "United States",
+      'Australia',
+      'Austria',
+      'Belgium ',
+      'Bosnia And Herzegovina',
+      'Canada',
+      'Denmark',
+      'Finland',
+      'France',
+      'Germany',
+      'Hungary',
+      'Iran',
+      'Ireland',
+      'Italy',
+      'Namibia',
+      'Netherlands',
+      'New Zealand',
+      'Poland',
+      'Portugal',
+      'Russian Federation',
+      'Serbia',
+      'Singapore',
+      'Slovakia',
+      'Slovenia',
+      'South Africa',
+      'Spain',
+      'Sweden',
+      'Switzerland',
+      'Trinidad and Tobago',
+      'United States',
   );
 }
 
 /**
- *
+ * 
  * @return array
  */
 function c24_audiences() {
   return array(
-      "All ages",
-      "Any age",
-      "Family friendly",
-      "0-4",
-      "5-6",
-      "7-10",
-      "11-13",
-      "14-15",
-      "16-17",
-      "18+",
+      'Any age',
+      'Family friendly',
+      '0-4',
+      '5-6',
+      '7-10',
+      '11-13',
+      '14-15',
+      '16-17',
+      '18+',
   );
 }
 
@@ -367,16 +387,16 @@ function c24_audiences() {
  */
 function c24_types() {
   return array(
-      "Late opening",
-      "Lecture",
-      "Exhibition (permanent)",
-      "Exhibition (temporary)",
-      "Event",
-      "Guided tour",
-      "Living history or re-enactment",
-      "Performance ",
-      "Seasonal event ",
-      "Storytelling session",
-      "Workshop or activity session",
+      'Late opening',
+      'Lecture',
+      'Exhibition (permanent)',
+      'Exhibition (temporary)',
+      'Event',
+      'Guided tour',
+      'Living history or re-enactment',
+      'Performance ',
+      'Seasonal event ',
+      'Storytelling session',
+      'Workshop or activity session',
   );
 }
