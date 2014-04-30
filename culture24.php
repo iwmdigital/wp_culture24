@@ -96,15 +96,6 @@ class culture24admin {
     add_settings_field(
             'c24_api_tag', 'Default search tag(s)', array($this, 'create_field_api_tag'), 'c24-settings-api', 'settings_api'
     );
-    add_settings_field(
-            'c24_api_epp', 'Events per page', array($this, 'create_field_api_epp'), 'c24-settings-api', 'settings_api'
-    );
-    add_settings_field(
-            'c24_api_efp', 'Events front page', array($this, 'create_field_api_efp'), 'c24-settings-api', 'settings_api'
-    );
-    add_settings_field(
-            'c24_api_vpp', 'Partners per page', array($this, 'create_field_api_vpp'), 'c24-settings-api', 'settings_api'
-    );
   }
 
   public function create_field_api_url() {
@@ -128,24 +119,6 @@ class culture24admin {
   public function create_field_api_tag() {
     ?>
     <input type="text" id="input_c24api_tag" name="c24[tag]" value="<?php echo get_option('c24api_tag', ''); ?>" size="128" />
-    <?php
-  }
-
-  public function create_field_api_epp() {
-    ?>
-    <input type="text" id="input_c24api_epp" name="c24[epp]" value="<?php echo get_option('c24api_epp', '10'); ?>" size="2" />
-    <?php
-  }
-
-  public function create_field_api_efp() {
-    ?>
-    <input type="text" id="input_c24api_efp" name="c24[efp]" value="<?php echo get_option('c24api_efp', '6'); ?>" size="2" />
-    <?php
-  }
-
-  public function create_field_api_vpp() {
-    ?>
-    <input type="text" id="input_c24api_vpp" name="c24[vpp]" value="<?php echo get_option('c24api_vpp', '25'); ?>" size="2" />
     <?php
   }
 
@@ -181,27 +154,6 @@ class culture24admin {
         add_option('c24api_tag', $input['tag']);
       } else {
         update_option('c24api_tag', $input['tag']);
-      }
-    }
-    if (isset($input['epp'])) {
-      if (get_option('c24api_epp') === FALSE) {
-        add_option('c24api_epp', $input['epp']);
-      } else {
-        update_option('c24api_epp', $input['epp']);
-      }
-    }
-    if (isset($input['efp'])) {
-      if (get_option('c24api_efp') === FALSE) {
-        add_option('c24api_efp', $input['efp']);
-      } else {
-        update_option('c24api_efp', $input['efp']);
-      }
-    }
-    if (isset($input['vpp'])) {
-      if (get_option('c24api_vpp') === FALSE) {
-        add_option('c24api_vpp', $input['vpp']);
-      } else {
-        update_option('c24api_vpp', $input['vpp']);
       }
     }
     return $input;
